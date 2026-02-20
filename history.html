@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attempt History • Online Exam</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/auth.js" defer></script>
+  <script src="./js/questionBank.js" defer></script>
+  <script src="./js/history.js" defer></script>
+</head>
+<body>
+
+  <div class="page-shell">
+    <div class="glass card" style="width:min(920px,95vw)">
+      <div class="result-top">
+        <div>
+          <h2>Attempt History</h2>
+          <p class="muted" id="histMeta"></p>
+        </div>
+        <div class="result-actions">
+          <button class="btn btn-dark" onclick="goDashboard()">Dashboard</button>
+          <button class="btn btn-danger" onclick="logout()">Logout</button>
+        </div>
+      </div>
+
+      <div class="row gap" style="margin: 10px 0 14px;">
+        <select id="filterTest" class="select"></select>
+        <button class="btn btn-dark" onclick="clearHistory()">Clear</button>
+      </div>
+
+      <div id="histList" class="review-list"></div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>

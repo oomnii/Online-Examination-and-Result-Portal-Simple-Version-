@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/auth.js" defer></script>
+  <script src="./js/questionBank.js" defer></script>
+  <script src="./js/dashboard.js" defer></script>
+</head>
+<body>
+
+  <div class="page-shell">
+    <div class="dashboard glass card">
+      <div class="dash-top">
+        <div>
+          <h2>Welcome, <span id="userName"></span> 👋</h2>
+          <p class="muted">Choose an action below.</p>
+        </div>
+        <button class="btn btn-danger" onclick="logout()">Logout</button>
+      </div>
+
+      <div class="dash-grid">
+        <div class="dash-tile glass-soft">
+          <h3>Start a Test</h3>
+          <p class="muted" id="testMeta">Choose a subject and start.</p>
+
+          <div class="row gap">
+            <select id="testSelect" class="select"></select>
+            <button class="btn btn-primary" onclick="startExam()">Start</button>
+          </div>
+        </div>
+
+        <div class="dash-tile glass-soft">
+          <h3>Last Result</h3>
+          <p class="muted" id="lastResultText">View your most recent attempt.</p>
+          <button class="btn btn-dark" onclick="viewResult()">Open Result</button>
+        </div>
+
+        <div class="dash-tile glass-soft">
+          <h3>Attempt History</h3>
+          <p class="muted">See all your past attempts (latest first).</p>
+          <button class="btn btn-dark" onclick="goHistory()">Open History</button>
+        </div>
+
+        <div class="dash-tile glass-soft">
+          <h3>Leaderboard</h3>
+          <p class="muted">Top scores on this device.</p>
+          <button class="btn btn-dark" onclick="goLeaderboard()">Open Leaderboard</button>
+        </div>
+
+        <div class="dash-tile glass-soft">
+          <h3>Create Quiz 📝</h3>
+          <p class="muted">Build and manage your custom quizzes.</p>
+          <button class="btn btn-primary" onclick="goCreateQuiz()">Create Quiz</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>
