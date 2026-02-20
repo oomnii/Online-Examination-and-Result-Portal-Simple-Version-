@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam • Online Exam</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/auth.js" defer></script>
+  <script src="./js/questionBank.js" defer></script>
+  <script src="./js/exam.js" defer></script>
+</head>
+<body>
+
+  <div class="page-shell">
+    <div class="exam-wrapper">
+      <!-- Header -->
+      <div class="exam-header glass card">
+        <div class="header-left">
+          <div class="chip">
+            <span class="chip-label">Test</span>
+            <span class="chip-value" id="testName">DSA</span>
+          </div>
+          <div class="chip">
+            <span class="chip-label">Time Left</span>
+            <span class="chip-value" id="timer">10:00</span>
+          </div>
+          <div class="chip">
+            <span class="chip-label">Answered</span>
+            <span class="chip-value"><span id="answered">0</span>/<span id="totalQuestions">12</span></span>
+          </div>
+        </div>
+
+        <div class="header-mid">
+          <div class="progress-bar" aria-label="Progress">
+            <div id="progressFill" class="progress-fill" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+          </div>
+          <div class="muted tiny" id="progressText">0% complete</div>
+        </div>
+
+        <div class="header-right">
+          <button class="btn btn-danger" onclick="submitExam(true)">Submit</button>
+        </div>
+      </div>
+
+      <!-- Main -->
+      <div class="exam-main">
+        <div class="palette glass card">
+          <div class="palette-title">Questions</div>
+          <div id="palette" class="palette-grid"></div>
+
+          <div class="legend">
+            <div><span class="dot dot-active"></span> Current</div>
+            <div><span class="dot dot-answered"></span> Answered</div>
+            <div><span class="dot dot-empty"></span> Not answered</div>
+          </div>
+        </div>
+
+        <div class="question-area glass card">
+          <div id="questionContainer"></div>
+
+          <div class="nav-row">
+            <button class="btn btn-dark" onclick="prevQ()">Previous</button>
+            <button class="btn btn-primary" id="nextBtn" onclick="nextQ()">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    requireLogin();
+  </script>
+
+</body>
+</html>

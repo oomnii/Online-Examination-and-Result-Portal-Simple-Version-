@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Result • Online Exam</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/auth.js" defer></script>
+  <script src="./js/result.js" defer></script>
+</head>
+<body>
+
+  <div class="page-shell">
+    <div class="result-wrapper glass card">
+      <div class="result-top">
+        <div>
+          <h2>Result Summary</h2>
+          <p class="muted" id="attemptMeta"></p>
+        </div>
+        <div class="result-actions">
+          <button class="btn btn-primary" onclick="retest()">Retest</button>
+          <button class="btn btn-danger" onclick="logout()">Logout</button>
+        </div>
+      </div>
+
+      <div class="result-grid">
+        <div class="stat glass-soft">
+          <div class="stat-label">Score</div>
+          <div class="stat-value"><span id="scoreVal">0</span>/<span id="totalVal">0</span></div>
+        </div>
+        <div class="stat glass-soft">
+          <div class="stat-label">Percentage</div>
+          <div class="stat-value"><span id="percentVal">0</span>%</div>
+        </div>
+        <div class="stat glass-soft">
+          <div class="stat-label">Grade</div>
+          <div class="stat-value" id="gradeVal">-</div>
+        </div>
+      </div>
+
+      <div class="bar-wrap">
+        <div class="bar">
+          <div class="bar-fill" id="barFill"></div>
+        </div>
+        <div class="bar-meta muted tiny">
+          Correct: <b id="correctVal">0</b> • Wrong: <b id="wrongVal">0</b> • Unanswered: <b id="unansweredVal">0</b>
+        </div>
+      </div>
+
+      <h3 class="section-title">Answer Review (Correct Answers Shown)</h3>
+      <div id="reviewList" class="review-list"></div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>

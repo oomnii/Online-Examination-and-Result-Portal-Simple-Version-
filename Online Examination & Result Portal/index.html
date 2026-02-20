@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login • Online Exam</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/auth.js" defer></script>
+</head>
+<body>
+
+  <div class="page-shell">
+    <div class="login-card glass card">
+      <h2>Online Examination Portal</h2>
+      <p class="muted">Login to start your test</p>
+
+      <div class="field">
+        <label>Username</label>
+        <input type="text" id="username" placeholder="e.g. omseth" autocomplete="username" />
+      </div>
+
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="••••••••" autocomplete="current-password" />
+      </div>
+
+      <button class="btn btn-primary btn-full" onclick="login()">Login</button>
+
+      <p class="muted tiny">Demo login: any username/password works.</p>
+    </div>
+  </div>
+
+</body>
+</html>
